@@ -1,0 +1,156 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Register - Brand</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/simple-line-icons.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/Comment.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/vanilla-zoom.min.css') }}"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand logo" href="#">Concentra</a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup">Signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signin">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="page registration-page">
+      <section class="clean-block clean-form dark">
+        <div class="container">
+          <div class="block-heading">
+            <h2 class="text-info">Registration</h2>
+            <!-- #displays the messages "Something went wrong" "Sign up successful." -->
+            <!-- "The two passwords do not match." depending on his input  -->
+            {% if s %}
+            {{s}} {%endif%} {% if f %} {{f}} {%endif%} {% if p %} {{p}}
+            {%endif%}
+          </div>
+          <div id="absoluteCenteredDiv">
+            <form class="mb-3" action="/signup" method="post">
+              <input
+                class="username"
+                placeholder="Email"
+                type="email"
+                name="email"
+              />
+              <br />
+              <br />
+
+              <input
+                class="username"
+                placeholder="Password"
+                type="password"
+                name="pass"
+              />
+              <br />
+              <br />
+
+              <input
+                class="username"
+                placeholder="Confirm Password"
+                type="password"
+                name="pass2"
+              />
+              <br />
+              <br />
+              <button class="login-submit" type="submit">submit</button> 
+              <!-- #submit button for signing up with the user's email and password -->
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h5>Get started</h5>
+            <ul>
+              <li><a href="index">Home</a></li>
+              <li><a href="signup">Sign up</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-3"></div>
+          <div class="col-sm-3">
+            <h5>About us</h5>
+            <ul>
+              <li><a href="#">19440</a></li>
+              <li><a href="#">Coursera@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2022 Copyright Text</p>
+      </div>
+    </footer>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="static/js/vanilla-zoom.js"></script>
+    <script src="static/js/theme.js"></script>
+    <script src="static/js/code.js"></script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Blog Post - Brand</title>        
+    <!-- #links to css files -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/simple-line-icons.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/Comment.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/vanilla-zoom.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='Comments.css') }}"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"> 
+      <!-- #navigation bar for users to navigate between different pages in the website -->
+      <div class="container">
+        <a class="navbar-brand logo" href="#">Concentra</a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup">Signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signin">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="page blog-post">
+      <section class="clean-block clean-post dark">
+        <div class="container">
+          <div class="block-content">
+            <div class="post-body">
+              <h3>HTML and CSS</h3>
+              <div class="post-info">
+                <div>
+                  <iframe
+                    src="https://firebasestorage.googleapis.com/v0/b/e-learn-937b1.appspot.com/o/html%20and%20css.mp4?alt=media&token=ce89af91-d607-4782-82a0-2e2845287f09"
+                    class="videoCourse"
+
+                  ></iframe>        
+                  <!-- #iframe video course user can access -->
+                  <div>
+                
+                    <div class="flexbox-container">
+                    
+                    <img style="height: 300px" class="rounded img-fluid" src="static/img/html-and-css3-html-css.jpg" alt="A generic square placeholder image with rounded corners in a figure.">
+                    
+                <h3 class="definition">What is HTML and CSS?</h3>
+
+<p>HTML is the universal markup language for the Web. HTML lets you format text, add graphics, create links, input forms, frames and tables, etc., and save it all in a text file that any browser can read and display.
+  What is CSS summary?
+It is a language designed to specify the overall appearance of webpages as well as the appearance and structure of the text and elements such as images and buttons on webpages and their layout.
+</p>
+  </div>
+                
+
+                <div class="flexbox-container flex-row add-comment-section mt-4 mb-4">                
+                  <!-- #input for the comment section where user can submit a comment -->
+                    <form class="flexbox-container" action="/comment2" method="post">
+                      <input placeholder="Add comment" class="form-control mr-3" type="text" name="Comment" />
+                      <button style="margin: 10px;" class="btn btn-primary" type="submit">submit</button>             
+                      <!-- #A button to submit the comment  -->
+                    </form>
+                    <form action="/show2" method="post">
+                      <button style="margin: 10px;" class="btn btn-primary" type="submit">Show comments</button>          
+                      <!-- #a button to show the comment section  -->
+                    </form>
+                    
+                  </div>
+      
+      
+      <div>
+        {% if e %} {{e}} {%endif%}        
+        <!-- #error if comment submitted is empty -->
+                    <div class="container bg-primary mb-1">
+                      <h2 class="text-center">Comments</h2>     
+                      <!-- #the area where the comments are displayed -->
+                    
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="container mt-5 mb-5">
+    
+                
+                <div class="coment-bottom bg-white p-2 px-4">
+                      <div class="commented-section mt-2">
+                        
+                        
+                        {% for l in get %}        
+                        <!-- #A loop to display every comment in the database -->
+                          <div class="flexbox-container flex-row align-items-center commented-user">        
+                            <!-- #l[2] displays the third element in a list which is the email of the user -->
+                              <h5 class="mr-2"> {{l[2]}}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">{{l[1]}}</span></div>      
+                              <!-- #l[1] displays the second element in a list which is the date the comment was posted. -->
+                          <div style="border-bottom: 1px dotted #ccc; padding-bottom: 10px; margin-left: 10%;" class="comment-text-sm"><span>{{l[0]}}</span></div><br> <br> {% endfor %}      
+                          <!-- #l[0] displays the first element in a list which is the comment -->
+                        
+                      </div>
+            
+            
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+        
+        </div>
+      </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+      
+    </section>
+  </main> 
+    <footer class="page-footer dark">         
+      <!-- #the footer of the website which contains the home, sign up and contact details  -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h5>Get started</h5>
+            <ul>
+              <li><a href="index">Home</a></li>
+              <li><a href="signup">Sign up</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-3"></div>
+          <div class="col-sm-3">
+            <h5>About us</h5>
+            <ul>
+              <li><a href="#">19440</a></li>
+              <li><a href="#">Coursera@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2022 Copyright Text</p>
+      </div>
+    </footer> 
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>                        
+    <!-- #javascript files for the website -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="static/js/vanilla-zoom.js"></script>
+    <script src="static/js/theme.js"></script>
+    <script src="static/js/code.js"></script>
+  </body>
+</html>

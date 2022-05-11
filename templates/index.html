@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Home - Brand</title>
+    <!-- #links to css files -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/simple-line-icons.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/Comment.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/vanilla-zoom.min.css') }}"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+    >
+      <!-- #navigation bar for users to navigate between different pages in the
+      website -->
+      <div class="container">
+        <a class="navbar-brand logo" href="#">Concentra</a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup">Signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signin">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="page landing-page">
+      <!-- #this section has the background image right below the nav bar -->
+      <section
+        class="clean-block clean-hero"
+        style="
+          background-image: url('static/img/tech/image4.jpg');
+          color: rgba(9, 162, 255, 0.85);
+        "
+      >
+        <div class="text">
+          <h2>Welcome!</h2>
+          <!-- #welcome paragraph with breaks in between -->
+          <p>
+            <br /><em>Concentra</em>&nbsp;is the global online learning platform
+            that <br />offers anyone, anywhere access to online courses and
+            degrees from <br />world-class universities and companies.<br /><br />
+          </p>
+        </div>
+      </section>
+      <section class="clean-block clean-info dark">
+        <div class="container" style="width: 600px">
+          <div class="block-heading" style="padding: 40px 0px 0px">
+            <h2 class="text-info">Our Courses</h2>
+            <!-- #Display of the courses -->
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="getting-started-info"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flexbox-container">
+          <!-- #courses displayed in flex boxes to make the website more responsive -->
+          <div class="container">
+            <div class="block-heading"></div>
+            <div class="row">
+              <div class="flexbox-container">
+                <div class="col-md-6 col-lg-4">
+                  <div class="course-card">
+                    <a href="Python">
+                      <img
+                        style="max-width: 320x; max-height: 120px"
+                        src="static/img/python.png"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h4 class="card-title">Python</h4>
+                      <p class="card-text">
+                        Includes procedural and data abstractions, program
+                        design, debugging, testing, and documentation. Covers
+                        data types, control structures, functions, parameter
+                        passing, library functions, arrays, inheritance and
+                        object oriented design. Laboratory exercises in Python.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="course-card">
+                    <a href="C++">
+                      <img
+                        style="max-width: 320x; max-height: 120px"
+                        src="static/img/C++.png"
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h4 class="card-title">
+                        C++
+                        <div></div>
+                      </h4>
+                      <p class="card-text">
+                        Introduction to computer programming using C++. Emphasis
+                        on the fundamentals of object-oriented design with
+                        development, testing, implementation, and documentation.
+                        Includes language syntax, data and file structures,
+                        input/output devices, and files.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flexbox-container">
+                <div class="col-md-6 col-lg-4">
+                  <div class="course-card">
+                    <a href="Javascript">
+                      <img
+                        style="max-width: 320x; max-height: 120px"
+                        src="static/img/js.png"
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h4 class="card-title">Javascript</h4>
+
+                      <p class="card-text">
+                        What is JavaScript? JavaScript (often shortened to JS)
+                        is a lightweight, interpreted, object-oriented language
+                        with first-class functions, and is best known as the
+                        scripting language for Web pages, but it's used in many
+                        non-browser environments as well.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="course-card">
+                    <a href="Html_and_Css">
+                      <img
+                        style="max-width: 320x; max-height: 120px"
+                        src="static/img/html-and-css3-html-css.jpg"
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h4 class="card-title">HTML and CSS</h4>
+                      <p class="card-text">
+                        Throughout this course, you'll learn about the
+                        underlying structure of the web - HTML. You'll learn how
+                        to use this tree-like structure to create websites.
+                        You'll also learn how to apply styling to a website
+                        through CSS. You'll learn about CSS syntax, selectors,
+                        and units. Along the way, you'll also learn about code
+                        editors and a browser's Developer Tools.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="clean-block features">
+        <div class="container">
+          <div class="block-heading">
+            <h2 style="color: black">Latest News</h2>
+            <!-- #a section for the latest news of the website -->
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-5 feature-box">
+              <i class="icon-globe icon"></i>
+              <h4>Password</h4>
+              <p>
+                You can now reset your password and change it without making a
+                new account.
+              </p>
+            </div>
+            <div class="col-md-5 feature-box">
+              <i class="icon-tag icon"></i>
+              <h4>Commnets</h4>
+              <p>
+                The launch of our new and enhanced commenting system. For every
+                one of our users to enjoy.
+              </p>
+            </div>
+            <div class="col-md-5 feature-box">
+              <i class="icon-screen-smartphone icon"></i>
+              <h4>Sign up</h4>
+              <p>
+                The two factor authentication is now an available function to
+                verify the emails of new customers.
+              </p>
+            </div>
+            <div class="col-md-5 feature-box">
+              <h4></h4>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="clean-block slider dark">
+        <div class="container">
+          <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  class="w-100 d-block"
+                  src="static/img/scenery/image1.jpg"
+                  alt="Slide Image"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="w-100 d-block"
+                  src="static/img/scenery/image4.jpg"
+                  alt="Slide Image"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="w-100 d-block"
+                  src="static/img/scenery/image6.jpg"
+                  alt="Slide Image"
+                />
+              </div>
+            </div>
+            <div>
+              <a
+                class="carousel-control-prev"
+                href="#carousel-1"
+                role="button"
+                data-bs-slide="prev"
+                ><span class="carousel-control-prev-icon"></span
+                ><span class="visually-hidden">Previous</span></a
+              ><a
+                class="carousel-control-next"
+                href="#carousel-1"
+                role="button"
+                data-bs-slide="next"
+                ><span class="carousel-control-next-icon"></span
+                ><span class="visually-hidden">Next</span></a
+              >
+            </div>
+            <ol class="carousel-indicators">
+              <li
+                data-bs-target="#carousel-1"
+                data-bs-slide-to="0"
+                class="active"
+              ></li>
+              <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="clean-block about-us">
+        <div class="container">
+          <div class="block-heading">
+            <h2 style="color: black">About Us</h2>
+            <p>
+              <br />We envision a world where
+              <strong>anyone, anywhere</strong> has the power to
+              <strong>transform their life through learning</strong
+              >.<br /><br />
+            </p>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-4">
+              <div class="card text-center clean-card">
+                <img
+                  class="card-img-top w-100 d-block"
+                  src="static/img/avatars/avatar1.jpg"
+                />
+                <div class="card-body info">
+                  <!-- #card system which talks about the team that created concentra -->
+                  <h4 class="card-title">Mohamed Essam</h4>
+                  <p class="card-text">
+                    A cyber security student in his entering his last year,
+                    attending coventry university.
+                  </p>
+                  <div class="icons">
+                    <a href="#"><i class="icon-social-facebook"></i></a
+                    ><a href="#"><i class="icon-social-instagram"></i></a
+                    ><a href="#"><i class="icon-social-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card text-center clean-card">
+                <img
+                  class="card-img-top w-100 d-block"
+                  src="static/img/avatars/avatar2.jpg"
+                />
+                <div class="card-body info">
+                  <h4 class="card-title">Seif eldin Sameh</h4>
+                  <p class="card-text">
+                    An aspiring student aiming to be an expert in Cyber
+                    Security.
+                  </p>
+                  <div class="icons">
+                    <a href="#"><i class="icon-social-facebook"></i></a
+                    ><a href="#"><i class="icon-social-instagram"></i></a
+                    ><a href="#"><i class="icon-social-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card text-center clean-card">
+                <img
+                  class="card-img-top w-100 d-block"
+                  src="static/img/avatars/fady on fire.jpeg"
+                />
+                <div class="card-body info">
+                  <h4 class="card-title">Fady Akram</h4>
+                  <p class="card-text">
+                    A third year student in coventry university's computing
+                    school.
+                  </p>
+                  <div class="icons">
+                    <a href="#"><i class="icon-social-facebook"></i></a
+                    ><a href="#"><i class="icon-social-instagram"></i></a
+                    ><a href="#"><i class="icon-social-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h5>Get started</h5>
+            <ul>
+              <li><a href="index">Home</a></li>
+              <li><a href="signup">Sign up</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-3"></div>
+          <div class="col-sm-3">
+            <h5>About us</h5>
+            <ul>
+              <li><a href="#">19440</a></li>
+              <li><a href="#">Coursera@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2022 Copyright Text</p>
+      </div>
+    </footer>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="static/js/vanilla-zoom.js"></script>
+    <script src="static/js/theme.js"></script>
+    <script src="static/js/code.js"></script>
+  </body>
+</html>

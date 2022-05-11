@@ -1,0 +1,248 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Profile - Concentra</title>
+    <!-- #links to css files -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/Comment.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <nav
+        class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0"
+      >
+        <div class="container-fluid d-flex flex-column p-0">
+          <a
+            class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+            href="#"
+          >
+            <div class="sidebar-brand-icon rotate-n-15">
+              <i class="fas fa-laugh-wink"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3"><span>Concentra</span></div>
+          </a>
+        </div>
+      </nav>
+      <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+          <nav
+            class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+          >
+            <!-- #navigation bar for users to navigate between different pages in the -->
+            <!-- website -->
+            <div class="container">
+              <a class="navbar-brand logo" href="#">Concentra</a
+              ><button
+                data-bs-toggle="collapse"
+                class="navbar-toggler"
+                data-bs-target="#navcol-1"
+              >
+                <span class="visually-hidden">Toggle navigation</span
+                ><span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="profile">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="signup">Signup</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="signin">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="container-fluid">
+            <h3 id="profile-text" class="text-dark mb-4">Profile</h3>
+            <div class="row mb-3">
+              <div class="col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-body text-center shadow">
+                    <img
+                      class="rounded-circle mb-3 mt-4"
+                      src="static/img/profile.jpg"
+                      width="160"
+                      height="160"
+                    />
+
+                    <form action="/logout" method="post">
+                      <button class="btn btn-primary btn-sm" type="submit">
+                        Logout
+                      </button>
+                    </form>
+
+                    <div class="mb-3">
+                      <strong>{% if username %} {{username}} {%endif%}</strong>
+                      <!-- #shows the email of the current user in session -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="row">
+                  <div class="col">
+                    <div class="card shadow mb-3">
+                      <div class="card-header py-3">
+                        <p class="text-primary m-0 fw-bold">Courses</p>
+                        <!-- #the card system for the courses in the profile page -->
+                      </div>
+                      <div class="card-body">
+                        <div class="container">
+                          <div class="block-heading"></div>
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <div class="course-card">
+                                <a href="Python">
+                                  <img
+                                    class="card-img-top w-100 d-block"
+                                    src="static/img/python.png"
+                                  />
+                                </a>
+                                <div class="card-body">
+                                  <h4 class="card-title">Python</h4>
+                                  <p class="card-text">
+                                    Includes procedural and data abstractions,
+                                    program design, debugging, testing, and
+                                    documentation. Covers data types, control
+                                    structures, functions, parameter passing,
+                                    library functions, arrays, inheritance and
+                                    object oriented design. Laboratory exercises
+                                    in Python.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="course-card">
+                                <a href="C++">
+                                  <img
+                                    class="card-img-top w-100 d-block"
+                                    src="static/img/C++.png"
+                                  />
+                                </a>
+                                <div class="card-body">
+                                  <h4 class="card-title">
+                                    C++
+                                    <div></div>
+                                  </h4>
+                                  <p class="card-text">
+                                    Introduction to computer programming using
+                                    C++. Emphasis on the fundamentals of
+                                    object-oriented design with development,
+                                    testing, implementation, and documentation.
+                                    Includes language syntax, data and file
+                                    structures, input/output devices, and files.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="course-card">
+                                <a href="Javascript">
+                                  <img
+                                    class="card-img-top w-100 d-block"
+                                    src="static/img/js.png"
+                                  />
+                                </a>
+                                <div class="card-body">
+                                  <h4 class="card-title">Javascript</h4>
+
+                                  <p class="card-text">
+                                    What is JavaScript? JavaScript (often
+                                    shortened to JS) is a lightweight,
+                                    interpreted, object-oriented language with
+                                    first-class functions, and is best known as
+                                    the scripting language for Web pages, but
+                                    it's used in many non-browser environments
+                                    as well.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="course-card">
+                                <a href="Html_and_Css">
+                                  <img
+                                    class="card-img-top w-100 d-block"
+                                    src="static/img/html-and-css3-html-css.jpg"
+                                  />
+                                </a>
+                                <div class="card-body">
+                                  <h4 class="card-title">HTML and CSS</h4>
+                                  <p class="card-text">
+                                    Throughout this course, you'll learn about
+                                    the underlying structure of the web - HTML.
+                                    You'll learn how to use this tree-like
+                                    structure to create websites. You'll also
+                                    learn how to apply styling to a website
+                                    through CSS. You'll learn about CSS syntax,
+                                    selectors, and units. Along the way, you'll
+                                    also learn about code editors and a
+                                    browser's Developer Tools.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer id="footer" class="page-footer dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <h5>Get started</h5>
+                <ul>
+                  <li><a href="index">Home</a></li>
+                  <li><a href="signup">Sign up</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-3"></div>
+              <div class="col-sm-3">
+                <h5>About us</h5>
+                <ul>
+                  <li><a href="#">19440</a></li>
+                  <li><a href="#">Coursera@gmail.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <p>© 2022 Copyright Text</p>
+          </div>
+        </footer>
+      </div>
+      <a
+        class="border rounded d-inline scroll-to-top"
+        href="#page-top"
+        style="display: none"
+        ><i class="fas fa-angle-up"></i
+      ></a>
+    </div>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/theme.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/theme.js"></script>
+  </body>
+</html>

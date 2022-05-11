@@ -1,0 +1,178 @@
+.card-inner {
+  margin-left: 4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: #000000;
+}
+
+.title {
+  font-size: 25;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: dodgerblue;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid dodgerblue;
+}
+
+#absoluteCenteredDiv {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+}
+
+.login-submit {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  width: 125px;
+  text-decoration: none;
+  border: 2px solid #d9edff;
+  color: #339dff;
+  font-size: 13px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 100px;
+  padding: 0 22px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #fff;
+  width: 170px;
+  margin-right: auto;
+}
+
+.username {
+  border-radius: 5px;
+}
+
+#profile-text {
+  margin: 10% 0 0 15%;
+}
+
+.course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #f6f6f6;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+}
+
+.flexbox-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flexbox-container .flex-row {
+  display: flex;
+  justify-content: center;
+}
+
+.definition {
+  padding: 0px 30px 0px 30px;
+}
+.videoCourse {
+  width: 1000px;
+  height: 600px;
+}
+
+.bdge {
+  height: 21px;
+  background-color: orange;
+  color: #fff;
+  font-size: 11px;
+  padding: 8px;
+  border-radius: 4px;
+  line-height: 3px;
+}
+
+.comments {
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  margin-top: 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hit-voting:hover {
+  color: blue;
+}
+
+.hit-voting {
+  cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+  .videoCourse {
+    width: 700px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 991px) {
+  #profile-text {
+    margin: 10% 0 0 45%;
+  }
+  .flexbox-container {
+    display: block;
+    text-align: center;
+  }
+  .videoCourse {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .videoCourse {
+    width: 200px;
+    height: 100px;
+  }
+}

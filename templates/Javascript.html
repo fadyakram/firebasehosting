@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Blog Post - Brand</title>                                  
+    <!-- #comments will be in C++ course page since all of them are almost the same structure. -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/simple-line-icons.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/Comment.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/vanilla-zoom.min.css') }}"
+    />
+    
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand logo" href="#">Concentra</a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup">Signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signin">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="page blog-post">
+      <section class="clean-block clean-post dark">
+        <div class="container">
+          <div class="block-content">
+            <div class="post-body">
+              <h3>Javascript</h3>
+              <div class="post-info">
+                <div>
+                  <iframe
+                    src="https://firebasestorage.googleapis.com/v0/b/e-learn-937b1.appspot.com/o/Learn%20JAVASCRIPT%20in%20just%205%20MINUTES%20(2020).mp4?alt=media&token=f0e2280f-ffdc-49a6-a277-ab29e441d738"
+                    class="videoCourse"
+
+                  ></iframe>
+                  <div>
+                
+                    <div class="flexbox-container">
+                    
+                    <img style="height: 300px" class="rounded img-fluid" src="static/img/js.png" alt="A generic square placeholder image with rounded corners in a figure.">
+                    
+                <h3 class="definition">What is javascript language?</h3>
+
+<p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved.</p>
+  </div>
+                
+
+                <div class="flexbox-container flex-row add-comment-section mt-4 mb-4">
+                    <form class="flexbox-container" action="/comment" method="post">
+                      <input placeholder="Add comment" class="form-control mr-3" type="text" name="Comment" />
+                      <button style="margin: 10px;" class="btn btn-primary" type="submit">submit</button>
+                    </form>
+                    <form action="/show" method="post">
+                      <button style="margin: 10px;" class="btn btn-primary" type="submit">Show comments</button>
+                    </form>
+                    
+                  </div>
+      
+      
+      <div>
+        {% if e %} {{e}} {%endif%}
+                    <div class="container bg-primary mb-1">
+                      <h2 class="text-center">Comments</h2>
+                      
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="container mt-5 mb-5">
+    
+                
+                <div class="coment-bottom bg-white p-2 px-4">
+                      <div class="commented-section mt-2">
+                        
+                        
+                        {% for l in get %}
+                          <div class="flexbox-container flex-row align-items-center commented-user">
+                              <h5 class="mr-2"> {{l[2]}}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">{{l[1]}}</span></div>
+                          <div style="border-bottom: 1px dotted #ccc; padding-bottom: 10px; margin-left: 10%;" class="comment-text-sm"><span>{{l[0]}}</span></div><br> <br> {% endfor %}
+                        
+                      </div>
+            
+            
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+        
+        </div>
+      </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+      
+    </section>
+  </main>
+    <footer class="page-footer dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h5>Get started</h5>
+            <ul>
+              <li><a href="index">Home</a></li>
+              <li><a href="signup">Sign up</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-3"></div>
+          <div class="col-sm-3">
+            <h5>About us</h5>
+            <ul>
+              <li><a href="#">19440</a></li>
+              <li><a href="#">Coursera@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2022 Copyright Text</p>
+      </div>
+    </footer>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="static/js/vanilla-zoom.js"></script>
+    <script src="static/js/theme.js"></script>
+    <script src="static/js/code.js"></script>
+  </body>
+</html>
